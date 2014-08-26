@@ -1,0 +1,8 @@
+{
+	"local": {
+		"database": "asterisk",
+		"username": "root",
+		"password": "1234",
+		"host": "localhost"
+	}
+}
