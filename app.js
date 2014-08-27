@@ -3,8 +3,23 @@
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes');
+var express = require('express');
+var routes = require('./routes');
+
+var Sippeer = require('./models/sippeer');  
+
+Sippeer
+    .findByName('qw')
+    .complete(function(err, sippeer) {
+	 	if(!err){
+	 		if(sippeer){
+	 			console.log(sippeer.values);
+	 		}
+	    }else{
+	      	console.log(err)
+	    }
+    });
+
 
 var app = module.exports = express.createServer();
 
